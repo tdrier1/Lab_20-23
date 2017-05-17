@@ -1,0 +1,57 @@
+﻿@model Lab_20.Models.Item
+<html>
+<style>
+    label {
+        text-align: center;
+        vertical-align: bottom;
+        font-family: Verdana;
+    }
+
+    body {
+        background-color: darkorange;
+    }
+</style>
+<center>
+    <form>
+    <body>
+    <label><h2>Please Browse our Selection!</h2></label>
+    <br />
+    <h3><label>Items List</label></h3>
+    @*<form action="/Home/SearchItems">
+        Search by Name:
+        <select name="SearchItems">
+            @foreach (var element in ViewBag.Names)
+            {
+                <option value="@element">@element</option>
+            }
+        </select>
+        <input type="submit" value="Submit">
+    </form>
+    <br />
+    <form>*@
+    <table border="1" style="font-family:Verdana;">
+        <tr><th>Name</th><th>Description</th><th>Quantity</th><th>Price</th></tr>
+        @if (ViewBag.ItemInfo != null)
+            {
+                foreach (var element in ViewBag.ItemInfo)
+                {
+                <tr>
+                    <td>@element.Name</td>
+                    <td>@element.Description</td>
+                    <td>@element.Quantity</td>
+                    <td>@element.Price</td>
+                    <td><a href="SavePurchaseItem?PurchaseName=@element.Name" onclick="return confirm('Purchase?')">Buy</a></td>
+                </tr>
+            }
+        }
+    </table>
+    </form>
+    <br />
+    <a href="/Home/Index">
+        <input type="submit" value="Home" />
+    </a>
+    </body>
+</center>
+
+</html>
+

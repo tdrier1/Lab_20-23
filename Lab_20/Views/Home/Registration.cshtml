@@ -1,0 +1,63 @@
+﻿@model Lab_20.Models.Customer
+
+<script src="~/Scripts/validatejs.js"></script>
+<html>
+        <link rel="stylesheet" type="text/css" href="~/Content/Style.css" />
+</head>
+
+    <style>
+        label {
+            width: 150px;
+            display: inline-block;
+            text-align: left;
+            vertical-align: bottom;
+            font-family: Verdana;
+        }
+
+        labelTwo {
+            width: 211px;
+            display: inline-block;
+            text-align: left;
+            vertical-align: bottom;
+            font-family: Verdana;
+        }
+        body {
+    background-color: darkorange;
+}
+    </style>
+
+    <center>
+        <font size="4" color="white" font face="verdana">Please Fill Out The Form to Register!</font>
+        <br />
+        <br />
+        <br />
+        <br />
+        <form name="input" action="/Home/AddUserScreen" onsubmit="return validateForm()" method="post">
+
+            <label>First Name: </label><input type="Text" name="FirstName" id= UserFirstName /><br />
+            <br />
+            <label>Last Name: </label><input type="Text" name="LastName" id="UserLastName" /><br />
+            <br />
+            <label>Email: </label><input type="email" name="Email" id="UserEmail" /><br />
+            <br />
+            <label>Phone Number: </label><input type="Text" name="Phone" id="UserPhone" /><br />
+            <br />
+            <label>State: </label><input type="Text" name="State" id="UserState" /><br />
+            <br />
+            <label>Password: </label><input type="password" name="Password" id="UserPassword" /><br />
+            <br />
+            <label>Retype Password: </label><input type="password" id="UserPassword2" /><br />
+            <br />
+            <labelTwo>Favorite Drink: </labelTwo>
+            <select id="UserDrink" name="Drink">
+                <option value="coffee">Coffee</option>
+                <option value="tea">Tea</option>
+                <option value="late">Late</option>
+                <option value="frappucino">Frappucino</option>
+            </select>
+            <br />
+            <br />
+            <input type="submit" value="Register" />
+        </form>
+    </center>
+</html>

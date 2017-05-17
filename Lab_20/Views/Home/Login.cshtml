@@ -1,0 +1,45 @@
+﻿@model Lab_20.Models.Customer
+<html>
+<link rel="stylesheet" type="text/css" href="~/Content/Style.css" />
+</head>
+
+<style>
+    label {
+        width: 150px;
+        display: inline-block;
+        text-align: left;
+        vertical-align: bottom;
+        font-family: Verdana;
+    }
+
+    labelTwo {
+        width: 211px;
+        display: inline-block;
+        text-align: left;
+        vertical-align: bottom;
+        font-family: Verdana;
+    }
+
+    body {
+        background-color: darkorange;
+    }
+</style>
+
+<center>
+    <font size="4" color="white" font face="verdana">Please Login!</font>
+    <br />
+    <br />
+    <br />
+    <br />
+    <form name="input" action="/Login/Authorize" method="post">
+        <label>Email: </label><input type="email" name="Email" id="UserEmail" /><br />
+        <br />
+        <label>Password: </label><input type="password" name="Password" id="UserPassword" /><br />
+        <br />
+        <br />
+        <input type="submit" value="Login" />
+    </form>
+</center>
+</html>
+
+

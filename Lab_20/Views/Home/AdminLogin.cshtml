@@ -1,0 +1,40 @@
+﻿<html>
+<link rel="stylesheet" type="text/css" href="~/Content/Style.css" />
+</head>
+
+<style>
+    label {
+        width: 150px;
+        display: inline-block;
+        text-align: left;
+        vertical-align: bottom;
+        font-family: Verdana;
+    }
+
+    labelTwo {
+        width: 211px;
+        display: inline-block;
+        text-align: left;
+        vertical-align: bottom;
+        font-family: Verdana;
+    }
+
+    body {
+        background-color: darkorange;
+    }
+</style>
+
+<center>
+    <font size="4" color="white" font face="verdana">Administrator Login!</font>
+    <br />
+    <br />
+    <br />
+    <br />
+    <form name="input" action="/Login/AdminPwd" method="post">
+        <label>Password: </label><input type="password" name="Pwd" id="AdminPassword" /><br />
+        <br />
+        <br />
+        <input type="submit" value="Login" />
+    </form>
+</center>
+</html>

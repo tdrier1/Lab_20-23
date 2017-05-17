@@ -1,0 +1,57 @@
+﻿@model Lab_20.Models.Item
+
+<style>
+    label 
+    {
+        display: inline-block;
+        text-align: center;
+        vertical-align: bottom;
+        font-family: Verdana;
+    }
+
+    labelTwo 
+    {
+        width: 211px;
+        display: inline-block;
+        text-align: left;
+        vertical-align: bottom;
+        font-family: Verdana;
+    }
+
+    body {
+        background-color: darkorange;
+    }
+</style>
+<html>
+<form>
+    <center>
+        <br />
+        <br />
+        <h2><label>Items List</label></h2>
+        <br />
+        <table border="1" style="font-family:Verdana;">
+            <tr><th>Name</th><th>Description</th><th>Quantity</th><th>Price</th></tr>
+            @if (ViewBag.ItemInfo != null)
+            {
+                foreach (var element in ViewBag.ItemInfo)
+                {
+                    <tr>
+                        <td>@element.Name</td>
+                        <td>@element.Description</td>
+                        <td>@element.Quantity</td>
+                        <td>$ @element.Price</td>
+                        <td><a href="UpdateItem?UpdateName=@element.Name">Update</a></td>
+                        <td><a href="DeleteItem?DeleteName=@element.Name" onclick="return confirm('Are you sure?')">Delete</a></td>
+                    </tr>
+                }
+            }
+        </table>
+        <br />
+        <br />
+        <font size="4" color="white" font face="verdana">
+        <a href="/Home/Index">Home</a>
+        <a href="/Home/AddItem">Add An Item!</a>
+            
+</center>
+</form>
+</html>

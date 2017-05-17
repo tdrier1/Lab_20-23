@@ -1,0 +1,51 @@
+﻿@model Lab_20.Models.Item
+
+<style>
+    label {
+        width: 150px;
+        display: inline-block;
+        text-align: left;
+        vertical-align: bottom;
+        font-family: Verdana;
+    }
+
+    labelTwo {
+        width: 211px;
+        display: inline-block;
+        text-align: left;
+        vertical-align: bottom;
+        font-family: Verdana;
+    }
+
+    body {
+        background-color: darkorange;
+    }
+</style>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AddAnItem</title>
+</head>
+<body>
+    <center>
+        <font size="4" color="white" font face="verdana">Add An Item to Inventory</font>
+        <br />
+        <br />
+        <br />
+        <br />
+        <form name="input" action="/Home/SaveNewItem" method="post">
+
+            <label>Name: </label><input type="Text" name="Name" id="Name"/><br />
+            <br />
+            <label>Description: </label><input type="Text" name="Description" id="Description" /><br />
+            <br />
+            <label>Quantity: </label><input type="Text" name="Quantity" id="Quantity"/><br />
+            <br />
+            <label>Price: </label><input type="Text" name="Price" id="Price"/><br />
+            <br />
+            <br />
+            <input type="submit" value="Submit">
+        </form>
+    </center>
+</body>
+</html>
